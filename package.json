@@ -1,7 +1,7 @@
 {
   "name": "seti-syntax",
   "theme": "Seti Syntax Theme",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Seti Syntax - A subtle dark colored theme for Atom.",
   "repository": "https://github.com/jesseweed/seti-syntax",
   "license": "MIT",
