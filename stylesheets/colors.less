@@ -1,57 +1,56 @@
 // GUTTER
-@gutter-text: rgb(42,53,56);
-@gutter-text-highlight: rgb(153,153,51);
-@gutter-background: rgb(23,25,27);
-@gutter-background-highlight: rgb(18,22,25);
+@gutter-text: rgb(54,65,73);
+@gutter-text-highlight: @entity;
+@gutter-background: rgb(18,19,20);
+@gutter-background-highlight: rgb(8,9,10);
 
 // CODE VIEW
-@code-background: rgb(21,22,23); // editor background
+@code-background: rgb(21,23,24); // editor background
 @code-font: Source Code Pro;
-@code-font-color: rgb(189, 195, 199); // default editor text
+@code-font-color: rgb(212,215,214); // default editor text
 
 // SYNTAX COLORS
 @comment: rgb(65,83,91); // comments, duhr.
 @comment-bg: none; // comments, duhr.
 @comment-punc: @comment;
-@string: #fff; // 'value' of var='value', "name.png" or src="name.png"
+@string: rgb(85,181,219); // 'value' of var='value', "name.png" or src="name.png"
 @constant: rgb(205,63,69); // true of var x = true, {{}} of {{> hbs_include}}
-@variable: rgb(124,160,63); // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
-@support: rgb(191,108,146); // module of module.exports, color of color: rgb(0,0,0)
-@entity: rgb(28,124,174); // exports of module.exports, <div id= of <div id="#id">, . of .className
-@keyword: rgb(214,193,55); // = of var a = b, if of if a = b, px of font-size: 13px;
-@storage: rgb(46,142,110); // var of var a = b;
+@variable: rgb(159,202,86); // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
+@support: rgb(160,116,196); // module of module.exports, color of color: rgb(0,0,0)
+@entity: @string; // exports of module.exports, <div id= of <div id="#id">, . of .className
+@keyword: rgb(159,202,86); // = of var a = b, if of if a = b, px of font-size: 13px;
+@storage: rgb(230,205,105); // var of var a = b;
 @meta: @code-font-color; // none of border: none;
 @function-param: rgb(85,181,219);
 
 @regex: @string;
 
 @numeric: @constant;
-@brackets: @string;
 @quotes: @code-font-color;
 
-@unknown: magenta; // color to use for things when we're not sure what they do
+@markup: @code-font-color;
+@unknown: @code-font-color;
 
 // MISC COLORS
 @invisible: rgba(255,255,255,0.1);
-@guides: rgba(245,250,255,0.075);
-@cursor-color: #CF6A4C;
-@cursor-width: 2px;
-@selected: green; // selected background color
+@guides: rgba(245,250,255,0.04);
+@cursor-color: @code-font-color;
+@cursor-width: px;
+@selected: rgba(255,255,255,0.); // selected background color
+@selected-line: rgb(16, 17, 18);
 
-
-@tag: rgb(28,124,174);
+@tag: @class;
 @tag-entity: @entity;
-@element-attr: @constant;
+@element-attr: @variable;
 @class: rgb(85,181,219);
 @id: @constant;
 
 @entity-function: @entity;
-@punctuation: @brackets;
+@brackets: darken(@code-font-color, 30%);
+@punctuation: darken(@code-font-color, 30%);
 
 @search-bg: transparent;
 @search-border: solid 1px @entity;
 
 @search-active-bg: @entity;
 @search-active-border: solid 1px @entity;
-
-@selected-line: rgb(11, 10, 12);

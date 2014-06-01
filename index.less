@@ -12,7 +12,7 @@
   background-color: @code-background;
   color: @code-font-color;
 
-  border-top: solid 6px @selected-line;
+  // border-top: solid 6px @selected-line;
 
   // LINE THAT DESIGNATES WHERE TEXT WILL WRAP
   .wrap-guide {
@@ -33,14 +33,13 @@
 
     background-color: @gutter-background;
     color: @gutter-text;
-    border-right: 15px solid @code-background;
+    // border-right: 10px solid @code-background;
 
     .line-number {
 
       // GUTTER BACKGROUND
       background: @gutter-background;
       color: @gutter-text;
-      // padding-right: 20px;
       padding: 0px;
 
 
@@ -63,7 +62,7 @@
     // HOVER STATE FOR LINE NUMBERS
     .line-number:hover {
       background-color: @gutter-background !important;
-      color: @gutter-text;
+      color: @gutter-text-highlight;
     }
   }
 
@@ -88,8 +87,23 @@
 
   // BACKGROUND OF SELECTED TEXT
   .selection .region {
-    background-color: @selected !important;
+    background-color: @selected;
   }
+
+}
+
+// ADD LEFT PADDING TO CODE VIEW
+.scroll-view {
+  padding-left: 10px;
+}
+
+
+
+// SELECTED LINE STYLE
+.line.cursor-line {
+  background: @selected-line !important;
+  padding-left: 10px;
+  margin-left: -10px;
 }
 
 // HIGHLIGHT STYLE FOR SEARCH MATCHES
@@ -203,6 +217,10 @@
 
 .string {
 
+  .json {
+
+  }
+
   // 'value' of var='value', "name.png" or src="name.png"  , etc
   color: @string;
 
@@ -210,7 +228,6 @@
   .constant {
     color: @regex;
   }
-
 
   &.regexp {
 
@@ -267,7 +284,19 @@
 
 // MISC PUNCTUATION
 .punctuation {
+
+  &.terminator {
+    color: @punctuation;
+  }
+
+  &.separator {
+    color: @punctuation;
+  }
+
   &.definition {
+
+    color: @punctuation;
+
     &.comment {
       color: @comment-punc;
     }
@@ -277,7 +306,7 @@
     &.variable,
     &.parameters,
     &.array {
-      color: @quotes;
+      color: @string;
     }
 
     &.heading,
@@ -325,7 +354,7 @@
 
   // {{}} of {{ variable }}
   &.constant {
-    color: @unknown;  // none of text-decoration: none;
+    color: @constant;  // none of text-decoration: none;
   }
 
   &.type.property-name.css {
@@ -343,6 +372,55 @@
     color: @tag-entity;
   }
 
+
+.html {
+
+  .string {
+    color: @code-font-color !important;
+  }
+
+
+  // inline elements - <span>
+  .meta {
+
+
+  }
+
+  .punctuation.definition.tag {
+    color: @tag;
+  }
+
+  .entity {
+
+    &.name.tag {
+      text-decoration: done;
+
+      // structural elements - <html>
+      &.structure {
+        color: @tag;
+      }
+
+      // block level elements - <div>, <h1>
+      &.block {
+        color: @tag;
+      }
+
+      // inline elements - <span>
+      &.script {
+        // color: @tag;
+      }
+
+    }
+
+    &.other {
+      &.attribute-name {
+        color: @element-attr;
+      }
+    }
+
+  }
+
+}
 
 // ENTITY | exports of module.exports, <div id= of <div id="#id">, . of .className
 .entity {
@@ -392,15 +470,33 @@
 
 .meta {
   &.class {
-    color: @unknown;
+    color: @constant;
   }
 
   &.link {
-    color: @unknown;
+    color: @meta;
   }
 
   &.require {
-    color: @unknown;
+    color: @meta;
+  }
+
+
+  &.brace {
+
+    // curly braces - {}
+    &.curly {
+      color: @brackets;
+    }
+
+    // parenthesis - ()
+    &.round {
+      color: @code-font-color;
+    }
+  }
+
+  &.comma {
+    color: @punctuation;
   }
 
   // .css files | commas, ([controls]) of audio:not([controls])
@@ -409,8 +505,8 @@
   }
 
   &.separator {
-    background-color: @unknown;
-    color: @unknown;
+    background-color: @punctuation;
+    color: @punctuation;
   }
 }
 
@@ -420,41 +516,41 @@
 
 .markup {
   &.bold {
-    color: @meta;
+    color: @markup;
     font-style: bold;
   }
 
   &.changed {
-    color: @meta;
+    color: @markup;
   }
 
   &.deleted {
-    color: @meta;
+    color: @markup;
   }
 
   &.italic {
-    color: @meta;
+    color: @markup;
     font-style: italic;
   }
 
   &.heading .punctuation.definition.heading {
-    color: @meta;
+    color: @markup;
   }
 
   &.inserted {
-    color: @meta;
+    color: @markup;
   }
 
   &.list {
-    color: @meta;
+    color: @markup;
   }
 
   &.quote {
-    color: @meta;
+    color: @markup;
   }
 
   &.raw.inline {
-    color: @meta;
+    color: @markup;
   }
 }
 
