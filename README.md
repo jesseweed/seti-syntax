@@ -1,5 +1,5 @@
-# my-theme-syntax theme
+# Seti Syntax
 
-A short description of your theme.
+A subtle dark colored syntax theme for Atom. Seti [UI Theme](https://github.com/jesseweed/seti-ui) also available.
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+![Screenshot](screenshot.png)
