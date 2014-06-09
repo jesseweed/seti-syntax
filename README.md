@@ -1,6 +1,6 @@
 # Seti Syntax
 
-A subtle dark colored syntax theme for Atom. [Seti UI](https://atom.io/themes/seti-ui) also available ;)
+A subtle dark colored syntax theme for Atom. [Seti UI](https://atom.io/themes/seti-ui) also available.
 
 ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/screenshot.png)
 
