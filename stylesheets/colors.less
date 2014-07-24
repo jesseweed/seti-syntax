@@ -1,8 +1,16 @@
+// COLORS
+@blue: rgb(85,181,219);
+@green: rgb(159,202,86);
+@yellow: rgb(230,205,105);
+@red: rgb(205,63,69);
+@purple: rgb(160,116,196);
+
+
 // GUTTER
-@gutter-text: rgb(54,65,73);
+@gutter-text: rgb(64,75,83);
 @gutter-text-highlight: @entity;
-@gutter-background: rgb(18,19,20);
-@gutter-background-highlight: rgb(8,9,10);
+@gutter-background: rgb(14,17,18);
+@gutter-background-highlight: rgb(6,7,8);
 
 // CODE VIEW
 @code-background: rgb(21,23,24); // editor background
@@ -13,21 +21,21 @@
 @comment: rgb(65,83,91); // comments, duhr.
 @comment-bg: none; // comments, duhr.
 @comment-punc: @comment;
-@string: rgb(85,181,219); // 'value' of var='value', "name.png" or src="name.png"
-@constant: rgb(205,63,69); // true of var x = true, {{}} of {{> hbs_include}}
-@variable: rgb(159,202,86); // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
-@support: rgb(160,116,196); // module of module.exports, color of color: rgb(0,0,0)
-@entity: @string; // exports of module.exports, <div id= of <div id="#id">, . of .className
-@keyword: rgb(159,202,86); // = of var a = b, if of if a = b, px of font-size: 13px;
-@storage: rgb(230,205,105); // var of var a = b;
+@string: @blue; // 'value' of var='value', "name.png" or src="name.png"
+@constant: @red; // true of var x = true, {{}} of {{> hbs_include}}
+@variable: @green; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
+@support: @purple; // module of module.exports, color of color: rgb(0,0,0)
+@entity: @blue; // exports of module.exports, <div id= of <div id="#id">, . of .className
+@keyword: @green; // = of var a = b, if of if a = b, px of font-size: 13px;
+@storage: @yellow; // var of var a = b;
 @meta: @code-font-color; // none of border: none;
-@function-param: rgb(85,181,219);
+@function-param: @blue;
 
-@error: rgb(205,63,69);
+@error: @red;
 
 @regex: @string;
 
-@numeric: @constant;
+@numeric: @red;
 @quotes: @code-font-color;
 
 @markup: @code-font-color;
@@ -42,17 +50,17 @@
 @selected-line: rgb(16, 17, 18);
 
 @tag: @class;
-@tag-entity: @entity;
-@element-attr: @variable;
-@class: rgb(85,181,219);
-@id: @constant;
+@tag-entity: @blue;
+@element-attr: @green;
+@class: @blue;
+@id: @red;
 
-@entity-function: @entity;
+@entity-function: @blue;
 @brackets: darken(@code-font-color, 30%);
 @punctuation: darken(@code-font-color, 30%);
 
 @search-bg: transparent;
-@search-border: solid 1px @entity;
+@search-border: solid 1px @blue;
 
-@search-active-bg: @entity;
-@search-active-border: solid 1px @entity;
+@search-active-bg: @blue;
+@search-active-border: solid 1px @blue;
