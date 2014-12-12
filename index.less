@@ -87,7 +87,10 @@
 
   // BACKGROUND OF SELECTED TEXT
   .selection .region {
+    // background-color: rgba(230,205,105,0.2);
+    // border: solid 1px rgba(230,205,105,0.5);
     background-color: @selected;
+    border: solid 1px @selected-border;
   }
 
 }
@@ -106,21 +109,7 @@
   margin-left: -10px;
 }
 
-// HIGHLIGHT STYLE FOR SEARCH MATCHES
-.editor, :host {
-  .search-results .marker .region {
-    background-color: @search-bg;
-    border: @search-border;
-  }
-}
 
-// HIGHLIGHT STYLE FOR CURRENTLY SELECTED SEARCH RESULT
-.editor, :host {
-  .search-results .marker.current-result .region {
-    background-color: @search-active-bg;
-    border: @search-active-border;
-  }
-}
 
 // COMENTS, DUHR
 .comment {
