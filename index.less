@@ -1,13 +1,13 @@
 @import "./stylesheets/colors.less";
 
 // EDITOR BACKGROUND & FONT COLORS
-.editor-colors, :host {
+atom-text-editor, :host {
   background-color: @code-background;
   color: @code-font-color;
 }
 
 // MAIN CODE EDITOR STYLES
-.editor, :host {
+atom-text-editor, :host {
 
   background-color: @code-background;
   color: @code-font-color;
@@ -359,10 +359,10 @@
   color: @class;
 }
 
-  &.tag,
-  &.tag .entity {
-    color: @tag-entity;
-  }
+&.tag,
+&.tag .entity {
+  color: @tag-entity;
+}
 
 
 .html {
@@ -461,6 +461,10 @@
 }
 
 .meta {
+  & .class {
+    color: @constant;
+  }
+
   &.link {
     color: @meta;
   }
@@ -549,8 +553,8 @@
   }
 }
 
-.editor.mini, :host(.mini) {
- .scroll-view {
+atom-text-editor[mini], :host(.mini) {
+  .scroll-view {
     padding-left: 1px;
   }
 }
