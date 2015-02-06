@@ -1,3 +1,7 @@
+## 0.3
+* Break syntax into modules to make language specific styles easier to manage
+* Add specific styles for HTML, Jade, Handlebars, Mustache
+
 ## 0.2.1
 * Update text selection color
 
