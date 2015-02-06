@@ -29,7 +29,7 @@
 @keyword: @green; // = of var a = b, if of if a = b, px of font-size: 13px;
 @storage: @yellow; // var of var a = b;
 @meta: @code-font-color; // none of border: none;
-@function-param: @blue;
+@function-param: @blue;;
 
 @error: @red;
 
@@ -50,11 +50,14 @@
 @selected-border: rgba(85,181,219,0.9);
 @selected-line: rgba(0,0,0,0.2);
 
-@tag: @class;
+// HTML
+@tag: @blue;
 @tag-entity: @blue;
 @element-attr: @green;
-@class: @blue;
-@id: @red;
+@class: @green;
+@id: @green;
+@block: @blue;
+@inline: lighten(@blue, 25%);
 
 @entity-function: @blue;
 @brackets: darken(@code-font-color, 30%);
