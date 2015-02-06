@@ -6,6 +6,6 @@
   "repository": "https://github.com/jesseweed/seti-syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">0.99.0"
+    "atom": ">0.170.0"
   }
 }
