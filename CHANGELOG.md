@@ -1,3 +1,6 @@
+## 0.3.1
+* Remove reference to non-existant stylesheet
+
 ## 0.3
 * Break syntax into modules to make language specific styles easier to manage
 * Add specific styles for HTML, Jade, Handlebars, Mustache
