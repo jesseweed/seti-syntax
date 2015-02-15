@@ -1,3 +1,7 @@
+## 0.3.3
+* Fix C/C++ parenthesis highlighting
+* Adjust gutter padding
+
 ## 0.3.2
 * Fix deprecation errors
 * Update JSON syntax
