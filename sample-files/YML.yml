@@ -1,0 +1,64 @@
+#
+# Let's Chat Built-in Defaults
+#
+
+env: development # development / production
+
+http:
+  enable: true
+  port: 5000
+
+https:
+  enable: false
+  port: 5001
+  key: key.pem
+  cert: certificate.pem
+
+xmpp:
+  enable: false
+  debug:
+    handled: false
+    unhandled: false
+  port: 5222
+  host: localhost
+  tls:
+    enable: false
+    key: ./server.key
+    cert: ./server.crt
+
+database:
+  uri: mongodb://localhost/letschat
+
+secrets:
+  cookie: stop.hammer time!
+
+files:
+  enable: false
+  provider: local
+  maxFileSize: 100000000
+  restrictTypes: true
+  allowedTypes:
+    - 'image/jpeg'
+    - 'image/png'
+    - 'image/gif'
+
+  local:
+    dir: uploads
+
+  s3:
+    accessKeyId:
+    secretAccessKey:
+    bucket:
+    region:
+
+auth:
+  throttling:
+    enable: true
+    threshold: 3
+
+  providers: [local] # [local, kerberos, ldap] - You can specify the order
+
+  local:
+    enableRegistration: true
+    passwordRegex: ^.{8,64}$
+    salt: stop.hammer time! # Required when upgrading from version < 0.3
