@@ -1,3 +1,6 @@
+## 0.3.2
+* Fix deprecation errors
+
 ## 0.3.1
 * Remove reference to non-existant stylesheet
 
