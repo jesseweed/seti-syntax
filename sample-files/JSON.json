@@ -1,0 +1,8 @@
+{
+    "name":  "MyProject",
+    "version": 0.0.1,
+    "dependencies": {
+        "backbone": "latest",
+        "requirejs": "2.1.1"
+    }
+}
