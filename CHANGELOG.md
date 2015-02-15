@@ -1,5 +1,7 @@
 ## 0.3.2
 * Fix deprecation errors
+* Update JSON syntax
+* Add sample files for testing various languages
 
 ## 0.3.1
 * Remove reference to non-existant stylesheet
