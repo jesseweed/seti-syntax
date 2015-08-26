@@ -1,28 +1,64 @@
-var koa = require('koa');
-var app = koa();
+var cubes, list, math, num, number, opposite, race, square,
+  slice = [].slice;
 
-// x-response-time
-
-app.use(function *(next){
-  var start = new Date();
-  yield next;
-  var ms = new Date() - start;
-  this.set('X-Response-Time', ms + 'ms');
+module.exports = Router.extend({
+  routes: {
+    '': 'home',
+    "users/:id": "userDetail",
+    'info': 'info'
+  },
+  home: function() {
+    this.trigger('newPage', new HomePage);
+  },
+  userDetail: function(id) {
+    var user;
+    user = app.users.get(id);
+    if (user) {
+      this.trigger('newPage', new HomePage);
+    } else {
+      this.redirectTo('users');
+    }
+  }
 });
 
-// logger
+number = 42;
 
-app.use(function *(next){
-  var start = new Date();
-  yield next;
-  var ms = new Date() - start;
-  console.log('%s %s - %s', this.method, this.url, ms);
-});
+opposite = true;
 
-// response
+if (opposite) {
+  number = -42;
+}
 
-app.use(function *(){
-  this.body = 'Hello World';
-});
+square = function(x) {
+  return x * x;
+};
 
-app.listen(3000);
+list = [1, 2, 3, 4, 5];
+
+math = {
+  root: Math.sqrt,
+  square: square,
+  cube: function(x) {
+    return x * square(x);
+  }
+};
+
+race = function() {
+  var runners, winner;
+  winner = arguments[0], runners = 2 <= arguments.length ? slice.call(arguments, 1) : [];
+  return print(winner, runners);
+};
+
+if (typeof elvis !== "undefined" && elvis !== null) {
+  alert("I knew it!");
+}
+
+cubes = (function() {
+  var i, len, results;
+  results = [];
+  for (i = 0, len = list.length; i < len; i++) {
+    num = list[i];
+    results.push(math.cube(num));
+  }
+  return results;
+})();

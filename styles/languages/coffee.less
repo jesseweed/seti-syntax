@@ -1,0 +1,83 @@
+@import "colors";
+
+.source.coffee {
+
+  // COLORS
+
+  // @keyword   @storage   @constant   @variable   @function-param   @string   @regex   @punctuation   @support   @constant
+
+  // @tag-entity   @element-attr   @id   @markup   @code-font-color   @brackets   @tag  @red   @purple   @green   @blue
+
+  color: @white;
+
+  .constant.language.boolean.true.coffee {
+    color: @green;
+  }
+
+  .constant.language.boolean.false.coffee {
+    color: @red;
+  }
+
+  .constant.numeric.coffee {
+    color: @purple;
+  }
+
+  .meta.delimiter.method.period.coffee,
+  .meta.brace.round.coffee {
+    color: @punctuation;
+  }
+
+  .variable.other.readwrite.instance.coffee {
+    color: @green;
+  }
+
+  .punctuation.definition.string.end.coffee,
+  .punctuation.definition.string.begin.coffee,
+  .string.quoted.double.coffee,
+  .string.quoted.single.coffee {
+    color: @blue;
+  }
+
+  .keyword.operator.new.coffee {
+    color: @yellow;
+  }
+
+  .support.class.coffee {
+    color: @red;
+  }
+
+  .support.function.static.math.coffee {
+    color: @yellow;
+  }
+
+  .variable.parameter.function.coffee {
+    color: @red;
+  }
+
+  .entity.name.type.instance.coffee {
+    color: @red;
+  }
+
+  .keyword.control.coffee {
+    color: @purple;
+  }
+
+  .entity.name.function.coffee {
+    // color: lighten(@red, 20%);
+    color: @code-font-color;
+  }
+
+  .variable.assignment.coffee {
+    color: @code-font-color;
+  }
+
+  .punctuation.separator.key-value,
+  .keyword.operator.coffee {
+    color: @punctuation;
+  }
+
+  // .variable.coffee {
+  //   color: @variable;
+  // }
+
+}

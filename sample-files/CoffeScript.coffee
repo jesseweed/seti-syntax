@@ -1,6 +1,33 @@
+module.exports = Router.extend(
+  routes:
+    '': 'home'
+    'users/:id': 'userDetail'
+    'info': 'info'
+
+  home: ->
+    @trigger 'newPage', new HomePage
+    return
+  userDetail: (id) ->
+    user = app.users.get(id)
+
+    if user
+      @trigger 'newPage', new HomePage
+    else
+      @redirectTo 'users'
+
+    return
+)
+
+
 # Assignment:
-number   = 42
-opposite = true
+number  = 42
+string  = 'bar'
+truthy  = true
+falsy   = false
+object =
+  key1 : 'value1',
+  key2 : 'value2',
+  key3 : 'value3'
 
 # Conditions:
 number = -42 if opposite
