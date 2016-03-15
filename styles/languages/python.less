@@ -1,0 +1,29 @@
+@import "colors";
+
+.source.python {
+  .class{
+    color: @support;
+  }
+
+  .inherited-class{
+      color: darken(@variable, 20%);
+    }
+
+  .parameter{
+    color: @variable;
+  }
+
+  .storage {
+    color: @storage;
+  }
+
+  .string{
+    color: @string;
+    &.block{
+      color: darken(@string, 20%);
+      .keyword {
+        color: darken(@string, 20%);
+      }
+    }
+  }
+}
