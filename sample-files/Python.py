@@ -17,7 +17,7 @@ for ii in SubFib(10, 200):
         print ii
 
 
-class ThisClass(package.Object):
+class ThisClass(object):
     def __init__(self, *args, **kwargs):
         '''
         Block comments

@@ -1,19 +1,22 @@
 @import "colors";
 
 .source.python {
+
   .class{
     color: @support;
   }
 
+  .support.function.magic,
   .inherited-class{
-      color: darken(@variable, 20%);
+      color: lighten(@variable, 10%);
+      .support.function.builtin.python {
+        // Necessary to highlight the object base class correctly
+        color: lighten(@variable, 10%);
+      }
     }
 
-  .parameter{
-    color: @variable;
-  }
-
-  .storage {
+  .storage,
+  .keyword {
     color: @storage;
   }
 
