@@ -1,0 +1,32 @@
+@import "colors";
+
+.source.python {
+
+  .class{
+    color: @support;
+  }
+
+  .support.function.magic,
+  .inherited-class{
+      color: lighten(@variable, 10%);
+      .support.function.builtin.python {
+        // Necessary to highlight the object base class correctly
+        color: lighten(@variable, 10%);
+      }
+    }
+
+  .storage,
+  .keyword {
+    color: @storage;
+  }
+
+  .string{
+    color: @string;
+    &.block{
+      color: darken(@string, 20%);
+      .keyword {
+        color: darken(@string, 20%);
+      }
+    }
+  }
+}
