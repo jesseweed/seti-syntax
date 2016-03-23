@@ -1,3 +1,8 @@
+## 0.4.2
+* Add Javascript less file
+* Improve Python syntax highlighting
+* Fix nested JSON styles
+
 ## 0.4.1
 * Fix cursor position error
 
