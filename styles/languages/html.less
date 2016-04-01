@@ -1,9 +1,7 @@
-@import "colors";
-
 .html {
 
   .meta.tag.any {
-    color: @green;
+    color: @color3;
   }
 
   .entity.name.tag {
@@ -17,19 +15,19 @@
   }
 
   .punctuation.separator.key-value {
-    color: @green;
+    color: @color3;
   }
 
   .string.quoted.double {
-    color: lighten(@green, 20%);
+    color: lighten(@color2, 20%);
 
     .punctuation.definition.string {
       &.begin, &.end {
-        color: @green;
+        color: @color2;
       }
 
       .separator.key-value.html {
-        color: @green;
+        color: @color2;
       }
 
     }
