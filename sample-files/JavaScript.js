@@ -45,17 +45,29 @@ class Bread {
 
 class Sandwhich extends Bread {
 
+  var self = this,
+      truth = false,
+      foo = 'bar',
+      num = 000042,
+      obj = {
+        one: 'string',
+        two: true,
+        three: function (param) {
+          return param;
+        }
+      };
+
   constructor(slices) {
-    this.bread = super(slices);
-    this.toppings = [];
+    self.bread = super(slices);
+    self.toppings = [];
   }
 
   toppings( ingredients ) {
     ingredients.forEach(function(value, index) {
-      this.toppings.push( value );
+      self.toppings.push( value );
     });
   }
-  
+
 }
 
 var Club = new Sandwhich(3).toppings(['roast beef', 'turkey']);
@@ -73,8 +85,6 @@ var Club = new Sandwhich(3).toppings(['roast beef', 'turkey']);
 
   var myName = 'Slim Shady',
       template = 'Hello, my name is ${myName}';
-
-
 
 /*
 
@@ -101,7 +111,7 @@ testFunction('one', 'two', [1,2,3], {key: 'value'} );
 
   METHODS
   --------
-  WRAPPER: meta.method.js
+  CLASS: meta.method.js
 
   TRIGGER: break, case, catch, continue, do, else, export, finally, for, function, if, import, package, return, switch, throw, try, while, with
 

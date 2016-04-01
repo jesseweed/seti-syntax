@@ -48,18 +48,20 @@
 @comment-bg: none;
 @comment-punc: @comment;
 @constant: @color3; // true of var x = true, {{}} of {{> hbs_include}}
-@entity: @color1; // exports of module.exports, <div id= of <div id="#id">, . of .className
-@entity-function: @color1;
+@entity: @color5; // exports of module.exports, <div id= of <div id="#id">, . of .className
+@entity-function: @color5;
+@function: @entity-function;
 @function-param: @color1; // (one, two, three) of function (one, two, three)
 @keyword: @color4; // = of var a = b, if of if a = b, px of font-size: 13px;
 @meta: @code-font-color; // none of border: none;
 @numeric: @color3;
 @punctuation: darken(@code-font-color, 30%);
 @regex: @color1;
-@string: @color1; // 'value' of var='value', "name.png" or src="name.png"
-@storage: @color5; // var of var a = b;
-@support: @color2; // module of module.exports, color of color: rgb(0,0,0)
-@variable: @color4; // foo or function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
+@string: @color6; // 'value' of var='value', "name.png" or src="name.png"
+@storage: @white; // var of var a = b;
+@support: @color3; // module of module.exports, color of color: rgb(0,0,0)
+@variable: @color1; // foo of function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
+@storage-function: @color8;
 
 
 // HTML

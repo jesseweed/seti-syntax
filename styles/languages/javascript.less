@@ -1,7 +1,120 @@
+// obj.param.function() - @obj-name . @obj-method . @function
+@obj-name: @support;
+@obj-method: @entity;
+@obj-function: @function;
+
+// ENTITY
+@entity-name-type: @color1;
+@entity-name-function: @function;
+
+// STRING
+@string-quoted-double: @string;
+@string-quoted-single: @string;
+
+@punctuation-definition-string: @string;
+
+// STORAGE
+@storage-var: @storage;
+@storage-class: @storage;
+@storage-function: @storage;
+
+@keyword-control: @green;
+
+// VARIABLE
+@variable-other-property: @color3;
+@variable-other-module: @color3;
+@variable-other-module-alias: @color1;
+
+
 .source.js {
 
-  .punctuation.section.embedded.js {
-    color: pink;
+  color: @color1;
+
+  .entity {
+    &.name {
+      &.function {
+        color: @entity-name-function;
+      }
+      &.type {
+        color: @entity-name-type;
+      }
+    }
   }
+
+  .keyword {
+    &.control {
+      color: @keyword-control;
+    }
+  }
+
+  .string {
+    color: @string;
+    &.quoted {
+      &.double { color: @string-quoted-double; }
+      &.single { color: @string-quoted-single; }
+    }
+  }
+
+  .punctuation {
+    &.definition {
+      &.string {
+        color: @punctuation-definition-string;
+      }
+    }
+  }
+
+  .support {
+    &.function {
+      color: @function;
+    }
+  }
+
+  .variable {
+    // obj of obj.property
+    color: @support;
+    // property of obj.property
+    &.other {
+      &.property {
+        color: @color3;
+      }
+      &.module {
+        color: @color3;
+      }
+      &.module-alias {
+        color: @color1;
+      }
+    }
+    &.parameter {
+      &.function {
+        color: @obj-method;
+      }
+    }
+  }
+
+  .keyword {
+    &.operator {
+      &.assignment {
+        color: @punctuation;
+      }
+      &.new {
+        color: @color8;
+      }
+    }
+  }
+
+  .storage {
+    &.type {
+      &.class {
+        color: @storage-class;
+      }
+      &.function {
+        color: @storage-function;
+      }
+      &.var {
+        color: @storage-var;
+      }
+    }
+  }
+
 
 }
