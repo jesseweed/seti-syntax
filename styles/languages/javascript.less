@@ -21,7 +21,7 @@
 @keyword-control: @green;
 
 // VARIABLE
-@variable-other-property: @color3;
+@variable-other-property: @color4;
 @variable-other-module: @color3;
 @variable-other-module-alias: @color1;
 
@@ -75,13 +75,13 @@
     // property of obj.property
     &.other {
       &.property {
-        color: @color3;
+        color: @variable-other-property;
       }
       &.module {
-        color: @color3;
+        color: @variable-other-module;
       }
       &.module-alias {
-        color: @color1;
+        color: @variable-other-module-alias;
       }
     }
     &.parameter {

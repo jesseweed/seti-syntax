@@ -17,6 +17,11 @@
 @info: @color1;
 @success: @green;
 
+// GIT STATUS
+@removed: @red;
+@modified: @yellow;
+@added: @green;
+
 // TEXT
 @quotes: @code-font-color;
 @markup: @code-font-color;
@@ -57,7 +62,7 @@
 @numeric: @color3;
 @punctuation: darken(@code-font-color, 30%);
 @regex: @color1;
-@string: @color6; // 'value' of var='value', "name.png" or src="name.png"
+@string: @color1; // 'value' of var='value', "name.png" or src="name.png"
 @storage: @white; // var of var a = b;
 @support: @color3; // module of module.exports, color of color: rgb(0,0,0)
 @variable: @color1; // foo of function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
