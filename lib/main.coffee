@@ -1,3 +1,3 @@
 module.exports =
-  activate: () ->
-    require( atom.packages.getLoadedPackage('seti-syntax').path + '/lib/settings').init()
+  activate: (state) ->
+    require( atom.packages.getLoadedPackage('seti-syntax').path + '/lib/settings').init(state)
