@@ -10,7 +10,7 @@
 
 // CODE VIEW
 @code-background: @black; // editor background
-@code-font-color: @white; // default editor text
+@code-font-color: darken(@white, 10); // default editor text
 
 // STATUS
 @error: @red;
@@ -23,7 +23,7 @@
 @added: @green;
 
 // TEXT
-@quotes: @code-font-color;
+@quotes: @white;
 @markup: @code-font-color;
 @unknown: @code-font-color;
 
@@ -38,7 +38,7 @@
 @selected-text: @color1-text;
 
 
-// SEARCh
+// SEARCH
 @search-bg: transparent;
 @search-border: solid 1px @color1;
 @search-active-bg: @color1;
@@ -57,7 +57,6 @@
 @entity-function: @color5;
 @function: @entity-function;
 @function-param: @color1; // (one, two, three) of function (one, two, three)
-@keyword: @color4; // = of var a = b, if of if a = b, px of font-size: 13px;
 @meta: @code-font-color; // none of border: none;
 @numeric: @color3;
 @punctuation: darken(@code-font-color, 30%);
@@ -67,6 +66,62 @@
 @support: @color3; // module of module.exports, color of color: rgb(0,0,0)
 @variable: @color1; // foo of function(foo), hbs_include of {{> hbs_include}}, http://dom.com/ of url(http://dom.com/)
 @storage-function: @color8;
+
+// obj.param.function() - @obj-name . @obj-method . @function
+@obj-name: @support;
+@obj-method: @entity;
+@obj-function: @function;
+
+// CONSTANT
+@constant-name-attribute-tag: @tag;
+
+// ENTITY
+@entity-name-tag: @color1;
+@entity-name-type: @color1;
+@entity-name-function: @function;
+@entity-other-attribute-name: @color2;
+@entity-other-id: @id;
+
+// META
+@meta-control-flow: @color2;
+
+// STRING
+@string-quoted-double: @quotes;
+@string-quoted-single: @quotes;
+
+@punctuation-definition-array: @string;
+@punctuation-definition-string: @string;
+@punctuation-definition-variable: @variable;
+
+// STORAGE
+@storage-var: @storage;
+@storage-class: @storage;
+@storage-function: @storage;
+
+// KEYWORD
+@keyword: @color4;
+@keyword-control: @color2;
+@keyword-other-important: @red;
+@keyword-operator: @keyword;
+@keyword-operator-assignment: @punctuation;
+@keyword-operator-new: @color8;
+@variable-import: @color2;
+
+// SUPPORT
+@support-type-property-name: @code-font-color;
+@support-function-decl: @color1;
+
+// VARIABLE
+@variable: @color8;
+@variable-other: @color4;
+@variable-other-module: @color3;
+@variable-other-module-alias: @color1;
+@variable-other-object: @color2;
+@variable-other-property: @color4;
+
+// PUNCTUATION
+@punctuation: @grey;
+@punctuation-separator: @grey;
 
 
 // HTML

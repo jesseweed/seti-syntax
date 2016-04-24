@@ -34,9 +34,9 @@ class Bread {
     this.slices = 12;
 
     if ( slices > this.slices ) {
-      return 'not enough bread';
+      console.log('not enough bread');
     } else {
-      return slices;
+      console.log(slices);
     }
 
   }
