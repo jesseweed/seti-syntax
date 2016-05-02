@@ -24,7 +24,7 @@ If you're not in the market for an Atom theme, you can have a look at one of the
 -----
 
 ## What's New? 1.0 Update
-Seti has reached 1.0! It now integrates more tightly with Seti UI, and a new settings interface to allow you to select a base color theme.
+Seti has reached 1.0, and it now integrates more tightly with Seti UI. There is also a new settings interface that allows you to select a base color theme.
 
 ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/1.0-beta/screenshot.png)
 
