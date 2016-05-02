@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.1
+- Fix "path not defined" bug
+
 ## 1.0.0
 * Misc tweaks to syntax colors
 * Consolidate duplicate language styles into syntax.less file
