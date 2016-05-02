@@ -1,5 +1,4 @@
 Dom = require('./dom')
-Utility = require('./utility')
 
 module.exports =
   init: (state) ->
