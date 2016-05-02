@@ -1,7 +1,7 @@
 {
   "name": "seti-syntax",
   "theme": "syntax",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Seti Syntax - A subtle dark colored theme for Atom.",
   "main": "./lib/main",
   "repository": "https://github.com/jesseweed/seti-syntax",
@@ -11,17 +11,26 @@
   },
   "configSchema": {
     "dynamicColor": {
-        "title": "Dynamic Theme",
-        "description": "Enable this to set syntax color dynamically based on seti ui theme.",
-        "type": "boolean",
-        "default": true
-      },
-      "themeColor": {
-        "title": "Theme Color",
-        "description": "Set your default syntax color (this will be ignored if dynamic theme is enabled above).",
-        "type": "string",
-        "enum": ["Blue", "Green", "Orange", "Pink", "Purple", "Red", "Steel", "Yellow"],
-        "default": "Blue"
-      }
+      "title": "Dynamic Theme",
+      "description": "Enable this to set syntax color dynamically based on seti ui theme.",
+      "type": "boolean",
+      "default": true
+    },
+    "themeColor": {
+      "title": "Theme Color",
+      "description": "Set your default syntax color (this will be ignored if dynamic theme is enabled above).",
+      "type": "string",
+      "enum": [
+        "Blue",
+        "Green",
+        "Orange",
+        "Pink",
+        "Purple",
+        "Red",
+        "Steel",
+        "Yellow"
+      ],
+      "default": "Blue"
+    }
   }
 }
