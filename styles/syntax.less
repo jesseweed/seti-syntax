@@ -1,51 +1,30 @@
-@import "colors.less";
+@import "colors";
 
-// COMENTS, DUHR
+
+atom-text-editor[mini], :host(.mini) {
+ .scroll-view {
+    padding-left: 1px;
+  }
+}
+
+// MISC
+.text {
+  color: @code-font-color;
+}
+
+&.complete_tag {
+  color: @variable;
+}
+
+
+// COMENTS
 .comment {
   color: @comment;
   background: @comment-bg;
 }
 
 
-.keyword {
-
-  // @ of @font-face & @media
-  color: @keyword;
-
-  // try, catch, if, else, return (js)
-  &.control {
-    color: @keyword;
-  }
-
-  // =, +, -, ?, :, !=. &&, in (js)
-  &.operator {
-    color: @keyword;
-  }
-
-  // can't tell what this does :/
-  &.other.special-method {
-    color: @keyword;
-  }
-
-  // can't tell what this does :/
-  &.other.unit {
-    color: @keyword;
-  }
-}
-
-
-// STORAGE |
-.storage {
-  color: @storage;
-
-  // var of var a = b;
-  &.modifier {
-    color: @storage;
-  }
-
-}
-
-
+// CONSTANTS
 .constant {
 
   // true, false, null, undefined
@@ -54,6 +33,10 @@
   // \ of ("what\'s")
   &.character.escape {
     color: @constant;
+  }
+
+  &.name.attribute.tag {
+    color: @constant-name-attribute-tag;
   }
 
   // all the numbers!
@@ -73,20 +56,56 @@
 }
 
 
+// ENTITY | exports of module.exports, <div id= of <div id="#id">, . of .className
+.entity {
 
-.variable {
+  color: @entity;
 
-  // this (js), @varable_name (sass), http://web.com of url(http://web.com), variable of {{variable}} (handlebars)
-  color: @variable;
 
-  // can't tell what this does
-  &.interpolation {
-    color: @variable;
+  &.name {
+
+    &.class, &.type.class {
+      color: @support;
+    }
+    &.function {
+      color: @entity-name-function;
+    }
+    &.section {
+      color: @entity;
+    }
+    &.tag {
+      color: @entity-name-tag;
+      text-decoration: none;
+      &.block, &.inline, &.name {
+        color: @entity-name-tag;
+      }
+      &.structure {
+        color: @tag;
+      }
+      &.block {
+        color: @tag;
+      }
+    }
+    &.type {
+      color: @entity-name-type;
+      text-decoration: none;
+      &.tag {
+        color: @class;
+      }
+    }
   }
 
-  // foo & bar of function name(foo, bar)
-  &.parameter.function {
-    color: @function-param;
+
+  &.other {
+    &.attribute-name, {
+      color: @entity-other-attribute-name;
+      &.id {
+        color: @entity-other-id;
+      }
+    }
+    &.inherited-class {
+      color: @entity;
+    }
   }
 }
 
@@ -97,18 +116,207 @@
   color: @error;
 }
 
-.string {
 
-  .json {
+// KEYWORDS
+.keyword {
 
+  color: @keyword;
+
+  &.control {
+    color: @keyword-control;
   }
 
-  // 'value' of var='value', "name.png" or src="name.png"  , etc
+  &.operator {
+    color: @keyword-operator;
+    &.assignment {
+      color: @keyword-operator-assignment;
+    }
+    &.new {
+      color: @keyword-operator-new;
+    }
+  }
+
+  &.other {
+    &.important {
+      color: @keyword-other-important;
+    }
+    &.special-method {
+      color: @keyword;
+    }
+    &.unit {
+      color: @keyword;
+    }
+  }
+
+}
+
+
+// MARKUP
+.markup {
+  &.bold {
+    color: @markup;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @markup;
+  }
+
+  &.deleted {
+    color: @markup;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @markup;
+  }
+
+  &.inserted {
+    color: @markup;
+  }
+
+  &.italic {
+    color: @markup;
+    font-style: italic;
+  }
+
+  &.list {
+    color: @markup;
+  }
+
+  &.quote {
+    color: @quotes;
+  }
+
+  &.raw.inline {
+    color: @markup;
+  }
+}
+
+
+// META
+.meta {
+
+  &.link {
+    color: @meta;
+  }
+
+  &.require {
+    color: @meta;
+  }
+
+
+  &.brace {
+    &.curly { color: @brackets; }
+    &.round { color: @code-font-color;}
+  }
+
+  &.control {
+    &.flow {
+      color: @meta-control-flow;
+    }
+  }
+
+  &.comma {
+    color: @punctuation;
+  }
+
+  &.selector {
+    color: @punctuation;
+  }
+
+  &.separator {
+    background-color: @punctuation;
+    color: @punctuation;
+  }
+
+  &.tag {
+    color: @tag;
+  }
+}
+
+// NONE
+.none {
+  color: @code-font-color;
+}
+
+
+// PUNCTUATION
+.punctuation {
+  color: @punctuation;
+
+  &.terminator {
+    color: @punctuation;
+  }
+
+  &.separator {
+    color: @punctuation-separator;
+  }
+
+  &.definition {
+
+    color: @punctuation;
+
+    &.array {
+      color: @punctuation-definition-array;
+    }
+
+    &.bold {
+      color: @code-font-color;
+      font-weight: bold;
+    }
+
+    &.comment {
+      color: @comment-punc;
+    }
+
+    &.heading,
+    &.identity,
+    &.italic {
+      color: @code-font-color;
+    }
+
+    &.italic {
+      font-style: italic;
+    }
+
+    &.string {
+      color: @punctuation-definition-string;
+      &.begin, &.end {
+        color: @quotes;
+      }
+    }
+
+    &.variable {
+      color: @punctuation-definition-variable;
+    }
+
+    &.parameters {
+      color: @code-font-color;
+    }
+
+    &.tag {
+      color: @tag;
+    }
+  }
+
+  &.section.embedded {
+    color: @code-font-color;
+  }
+
+}
+
+
+
+// STRINGS
+.string {
   color: @string;
 
-  // REGEX - [\da-z] of /-([\da-z])/gi (js)
   .constant {
-    color: @regex;
+    color: @constant;
+  }
+
+  &.interpolated {
+    color: @variable;
   }
 
   &.regexp {
@@ -136,7 +344,11 @@
 
   }
 
-  // site.dir in {{site.dir}}
+  &.quoted {
+    &.double { color: @string-quoted-double; }
+    &.single { color: @string-quoted-single; }
+  }
+
   .variable {
     color: @variable;
   }
@@ -147,304 +359,88 @@
   }
 }
 
-// String interpolation in Ruby, CoffeeScript, and others
-.source .string {
-  .source,
-  .meta.embedded.line {
-    color: @string;
-  }
 
-  .punctuation.section.embedded {
-    color: @string;
-
-    .source {
-      color: @string;  // Required for the end of embedded strings in Ruby # 716
-    }
-  }
+.source {
+  color: @color1;
 }
 
-// MISC PUNCTUATION
-.punctuation {
+// STORAGE
+.storage {
+  color: @storage;
 
-  &.terminator {
-    color: @punctuation;
+  &.modifier {
+    color: @storage;
   }
 
-  &.separator {
-    color: @punctuation;
-  }
-
-  &.definition {
-
-    color: @punctuation;
-
-    &.comment {
-      color: @comment-punc;
+  &.type {
+    &.class {
+      color: @storage-class;
     }
-
-    // QUOTES
-    &.string,
-    &.variable,
-    &.array {
-      color: @string;
+    &.function {
+      color: @storage-function;
     }
-
-    &.parameters {
-      color: @code-font-color;
+    &.var {
+      color: @storage-var;
     }
-
-    &.heading,
-    &.identity {
-      color: @code-font-color;
-    }
-
-    &.bold {
-      color: @code-font-color;
-      font-weight: bold;
-    }
-
-    &.italic {
-      color: @code-font-color;
-      font-style: italic;
-    }
-  }
-
-  &.section.embedded {
-    color: @code-font-color;
   }
 
 }
 
 
-
+// SUPPORT
 .support {
 
-  // background of background: none,
   color: @support;
 
-  // SUPPORT | module of module.exports
   &.class {
     color: @support;
   }
 
   &.function  {
-    color: @entity; // .log of console.log, url of url(http://web.com)
-
-    // can't tell what this does :/
-    &.any-method {
-      color: @support;
+    color: @function;
+    &.decl {
+      color: @support-function-decl;
     }
   }
 
-  // {{}} of {{ variable }}
   &.constant {
-    color: @constant;  // none of text-decoration: none;
+    color: @constant;
   }
-
-  &.type.property-name.css {
-    color: @support;
-  }
-}
-
-// .class names in css & scss
-.source .entity.name.tag, .source .entity.other.attribute-name, .meta.tag.inline, .meta.tag.inline .entity {
-  color: @class;
-}
-
-  &.tag,
-  &.tag .entity {
-    color: @tag-entity;
-  }
-
-
-.html {
-
-  .string {
-    color: @code-font-color;
-  }
-
-
-  // inline elements - <span>
-  .meta {
-
-
-  }
-
-  .punctuation.definition.tag {
-    color: @tag;
-  }
-
-  .entity {
-
-    &.name.tag {
-      text-decoration: done;
-
-      // structural elements - <html>
-      &.structure {
-        color: @tag;
-      }
-
-      // block level elements - <div>, <h1>
-      &.block {
-        color: @tag;
-      }
-
-      // inline elements - <span>
-      &.script {
-        // color: @tag;
-      }
-
-    }
-
-    &.other {
-      &.attribute-name {
-        color: @element-attr;
-      }
-    }
-
-  }
-
-}
-
-// ENTITY | exports of module.exports, <div id= of <div id="#id">, . of .className
-.entity {
-
-  color: @entity;
-
-  // console of console.log (js)
-  &.name.type {
-    color: @entity;
-    text-decoration: none;
-  }
-
-  &.other.inherited-class {
-    color: @entity;
-  }
-
-  // init in init: function(){} (js)
-  &.name.function {
-    color: @entity;
-  }
-
-  &.name.class, &.name.type.class {
-    color: @support;
-  }
-
-  &.name.section {
-    color: @entity;
-  }
-
-  // div of <div> (html), body of body{} (css)
-  &.name.tag {
-    color: @tag;
-    text-decoration: done;
-  }
-
-
-  // CSS CLASSES
-  &.other.attribute-name {
-    color: @element-attr;
-
-    // CSS ID's
-    &.id {
-      color: @id;
+  &.type {
+    &.property-name {
+      color: @support-type-property-name;
     }
   }
 }
 
-.meta {
+// VARIABLES
+.variable {
+  color: @variable;
 
-  &.link {
-    color: @meta;
+  &.control.import.include {
+    color: @variable-import;
   }
 
-  &.require {
-    color: @meta;
-  }
+  &.other {
+    color: @variable-other;
 
-
-  &.brace {
-
-    // curly braces - {}
-    &.curly {
-      color: @brackets;
+    &.property {
+      color: @variable-other-property;
     }
-
-    // parenthesis - ()
-    &.round {
-      color: @code-font-color;
+    &.module {
+      color: @variable-other-module;
+    }
+    &.module-alias {
+      color: @variable-other-module-alias;
+    }
+    &.object {
+      color: @variable-other-object;
     }
   }
 
-  &.comma {
-    color: @punctuation;
-  }
-
-  // .css files | commas, ([controls]) of audio:not([controls])
-  &.selector {
-    color: @punctuation;
-  }
-
-  &.separator {
-    background-color: @punctuation;
-    color: @punctuation;
-  }
-}
-
-.none {
-  color: @code-font-color;
-}
-
-.markup {
-  &.bold {
-    color: @markup;
-    font-weight: bold;
-  }
-
-  &.changed {
-    color: @markup;
-  }
-
-  &.deleted {
-    color: @markup;
-  }
-
-  &.italic {
-    color: @markup;
-    font-style: italic;
-  }
-
-  &.heading .punctuation.definition.heading {
-    color: @markup;
-  }
-
-  &.inserted {
-    color: @markup;
-  }
-
-  &.list {
-    color: @markup;
-  }
-
-  &.quote {
-    color: @markup;
-  }
-
-  &.raw.inline {
-    color: @markup;
-  }
-}
-
-.source.gfm .markup {
-  -webkit-font-smoothing: auto;
-  &.heading {
-    color: @code-font-color;
-  }
-}
-
-
-atom-text-editor[mini], :host(.mini) {
- .scroll-view {
-    padding-left: 1px;
+  &.parameter {
+    &.function {
+      color: @obj-method;
+    }
   }
 }

@@ -20,11 +20,12 @@ html(lang="en")
         templating language with a
         strong focus on performance
         and powerful features.
+      
+    include ../file.name
     
-    //- block for dynamic content
+    //- i am a comment
     block dynamic-content
     
     ul
-      li item 1
-      li item 2
-      li item 3
+      each item in group
+      li #{item} name

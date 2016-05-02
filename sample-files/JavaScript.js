@@ -34,16 +34,16 @@ class Bread {
     this.slices = 12;
 
     if ( slices > this.slices ) {
-      return 'not enough bread';
+      console.log('not enough bread');
     } else {
-      return slices;
+      console.log(slices);
     }
 
   }
 
 }
 
-class Sandwhich extends Bread {
+class Sandwich extends Bread {
 
   constructor(slices) {
     this.bread = super(slices);
@@ -55,10 +55,10 @@ class Sandwhich extends Bread {
       this.toppings.push( value );
     });
   }
-  
+
 }
 
-var Club = new Sandwhich(3).toppings(['roast beef', 'turkey']);
+var Club = new Sandwich(3).toppings(['roast beef', 'turkey']);
 
 
 /*
@@ -73,8 +73,6 @@ var Club = new Sandwhich(3).toppings(['roast beef', 'turkey']);
 
   var myName = 'Slim Shady',
       template = 'Hello, my name is ${myName}';
-
-
 
 /*
 
@@ -101,13 +99,13 @@ testFunction('one', 'two', [1,2,3], {key: 'value'} );
 
   METHODS
   --------
-  WRAPPER: meta.method.js
+  CLASS: meta.method.js
 
   TRIGGER: break, case, catch, continue, do, else, export, finally, for, function, if, import, package, return, switch, throw, try, while, with
 
 */
 
-import { ham as turkey } from 'mySandwhich.js';
+import { ham as turkey } from 'mySandwich.js';
 
 var isFunction;
 

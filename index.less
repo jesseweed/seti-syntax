@@ -1,12 +1,17 @@
-@import "./styles/editor.less";
-@import "./styles/syntax.less";
-@import "./styles/plugins.less";
+@import "styles/colors";
+@import "styles/editor";
+@import "styles/plugins";
+@import "styles/syntax";
 
 // Language specific styles
-@import "./styles/languages/html.less";
-@import "./styles/languages/jade.less";
-@import "./styles/languages/javascript.less";
-@import "./styles/languages/json.less";
-@import "./styles/languages/mustache.less";
-@import "./styles/languages/go.less";
-@import "./styles/languages/python.less";
+@import "styles/languages/css";
+@import "styles/languages/go";
+@import "styles/languages/html";
+@import "styles/languages/jade";
+@import "styles/languages/javascript";
+@import "styles/languages/json";
+@import "styles/languages/mustache";
+@import "styles/languages/python";
+
+// PLUGINS
+@import "styles/plugins/git-time-machine";

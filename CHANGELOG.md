@@ -1,3 +1,23 @@
+# Changelog
+
+## 1.0.0
+* Misc tweaks to syntax colors
+* Consolidate duplicate language styles into syntax.less file
+* Add config file for user settings
+* Add theme files for syntax color options
+  * Blue (Default)
+  * Green
+  * Orange
+  * Pink
+  * Purple
+  * Steel
+  * Yellow
+* Enable user to select theme style in setting
+* Enable dynamic syntax color based on UI theme
+  * Update syntax theme ui theme changes
+  * Allow disabling of dynamic syntax theme in settings
+
+
 ## 0.4.2
 * Add Javascript less file
 * Improve Python syntax highlighting

@@ -1,0 +1,23 @@
+atom-text-editor,
+atom-text-editor::shadow {
+  .line.split-diff-added {
+    background: @added !important;
+    color: rgba(0,0,0,0.5) !important;
+    .text span, .source span {
+      color: rgba(0,0,0,0.5) !important;
+    }
+    .indent-guide {
+      opacity: 0;
+    }
+  }
+  .line.split-diff-removed {
+    background: @removed !important;
+    color: rgba(255,255,255,0.8) !important;
+    .text span, .source span {
+      color: rgba(255,255,255,0.8) !important;
+    }
+    .indent-guide {
+      opacity: 0;
+    }
+  }
+}
