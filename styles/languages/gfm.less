@@ -1,6 +1,8 @@
 @import "colors";
 
 .source.gfm {
+  color: @code-font-color;
+
   .heading {
     color: @meta-control-flow;
   }
@@ -18,6 +20,12 @@
     color: @entity-name-function;
   }
 
+  .italics {
+    color: @code-font-color;
+  }
+  .bold {
+    color: @code-font-color;
+  }
   .variable.list {
     color: @constant;
   }
@@ -28,9 +36,9 @@
 
   .raw {
     color: @string-quoted-double;
-    border: 1px solid @string-quoted-double;
+    border: 1px solid mix(@code-background, @string-quoted-double, 30%);;
+    background-color: mix(@code-background, @string-quoted-double, 80%);
     border-radius: 3px;
-    padding: 2px;
   }
 
 }
