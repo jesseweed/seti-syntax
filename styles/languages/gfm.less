@@ -1,0 +1,36 @@
+@import "colors";
+
+.source.gfm {
+  .heading {
+    color: @meta-control-flow;
+  }
+  .heading-1 {
+    font-weight: bold;
+  }
+  .heading-2 {
+    font-style: italic;
+  }
+
+  .entity {
+    color: @entity-function;
+  }
+  .link {
+    color: @entity-name-function;
+  }
+
+  .variable.list {
+    color: @constant;
+  }
+
+  .hr {
+    color: @meta-control-flow;
+  }
+
+  .raw {
+    color: @string-quoted-double;
+    border: 1px solid @string-quoted-double;
+    border-radius: 3px;
+    padding: 2px;
+  }
+
+}
