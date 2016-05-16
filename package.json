@@ -36,6 +36,6 @@
   "apmInstallSource": {
     "type": "git",
     "source": "michbarsinai/seti-syntax",
-    "sha": "dc35cc130b63010c8dae723979b36eea5f969393"
+    "sha": "fe9b3566f33aa0aa9614e8661e9054aaf753023c"
   }
 }

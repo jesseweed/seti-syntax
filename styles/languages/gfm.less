@@ -34,9 +34,18 @@
     color: @meta-control-flow;
   }
 
+  .comment.quote {
+    color: @string-quoted-single;
+  }
+
+  .support.quote {
+    color: @code-background;
+    background-color: @code-font-color;
+  }
+
   .raw {
     color: @string-quoted-double;
-    border: 1px solid mix(@code-background, @string-quoted-double, 30%);;
+    border: 1px solid mix(@code-background, @string-quoted-double, 30%);
     background-color: mix(@code-background, @string-quoted-double, 80%);
     border-radius: 3px;
   }
