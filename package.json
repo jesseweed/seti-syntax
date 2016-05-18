@@ -32,5 +32,10 @@
       ],
       "default": "Blue"
     }
+  },
+  "apmInstallSource": {
+    "type": "git",
+    "source": "michbarsinai/seti-syntax",
+    "sha": "fe9b3566f33aa0aa9614e8661e9054aaf753023c"
   }
 }
