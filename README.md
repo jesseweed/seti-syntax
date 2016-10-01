@@ -21,6 +21,7 @@ If you're not in the market for an Atom theme, you can have a look at one of the
 + [JetBrains](https://github.com/zchee/Seti_JetBrains)
 + [Sublime Text 3](https://packagecontrol.io/packages/Seti_UI)
 + [Vim](https://github.com/trusktr/seti.vim)
++ [Hyperterm](https://github.com/unluisco/hyperseti)
 
 -----
 
