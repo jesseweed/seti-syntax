@@ -3,31 +3,44 @@
 .source.gfm {
   color: @code-font-color;
 
-  .heading {
-    color: @meta-control-flow;
-  }
   .heading-1 {
-    font-weight: bold;
+    color: @markup-h1;
   }
   .heading-2 {
-    font-style: italic;
+    color: @markup-h2;
+  }
+  .heading-3 {
+    color: @markup-h3;
+  }
+  .heading-4 {
+    color: @markup-h4;
+  }
+  .heading-5 {
+    color: @markup-h5;
+  }
+  .heading-6 {
+    color: @markup-h6;
   }
 
   .entity {
     color: @entity-function;
   }
   .link {
-    color: @entity-name-function;
+    color: @green;
+    .entity {
+      color: @purple;
+    }
   }
 
-  .italics {
-    color: @code-font-color;
+  .italic {
+    color: @yellow;
   }
   .bold {
-    color: @code-font-color;
+    color: @yellow;
+    font-weight: bold;
   }
   .variable.list {
-    color: @constant;
+    color: @yellow-highlight;
   }
 
   .hr {
@@ -38,16 +51,10 @@
     color: @string-quoted-single;
   }
 
-  .support.quote {
-    color: @code-background;
-    background-color: @code-font-color;
-  }
-
   .raw {
-    color: @string-quoted-double;
-    border: 1px solid mix(@code-background, @string-quoted-double, 30%);
-    background-color: mix(@code-background, @string-quoted-double, 80%);
+    color: @red;
+    border: 1px solid mix(@code-background, @string-quoted-double, 90%);
+    background-color: mix(@code-background, @string-quoted-double, 90%);
     border-radius: 3px;
   }
-
 }
