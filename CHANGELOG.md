@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+- Fix deprecated selectors
+- Add support for Ink syntax
+- Update Markdown syntax
+- Update Jade syntax
+
 ## 1.0.1
 - Fix "path not defined" bug
 
