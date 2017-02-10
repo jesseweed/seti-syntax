@@ -1,3 +1,35 @@
-.syntax--jade {
+.syntax--jade, .syntax--pug {
 
+  color: @code-font-color;
+
+  .syntax--comment {
+    color: @comment;
+  }
+
+  .syntax--name {
+    color: @tag;
+  }
+
+  .syntax--entity {
+    color: @tag-entity;
+  }
+
+  .syntax--string {
+    color: @string;
+  }
+
+  .syntax--quoted {
+    color: @quotes;
+  }
+
+  syntax--entity
+  syntax--attribute-name
+  syntax--id
+
+  .syntax--attribute-name, .syntax--id {
+    color: @red !important;
+  }
+  .syntax--class {
+    color: @class;
+  }
 }
