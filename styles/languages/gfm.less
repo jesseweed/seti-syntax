@@ -1,57 +1,62 @@
 @import "colors";
 
-.source.gfm {
+.syntax--source.syntax--gfm {
   color: @code-font-color;
 
-  .heading-1 {
+  .syntax--heading-1 {
     color: @markup-h1;
   }
-  .heading-2 {
+  .syntax-heading-2 {
     color: @markup-h2;
   }
-  .heading-3 {
+  .syntax-heading-3 {
     color: @markup-h3;
   }
-  .heading-4 {
+  .syntax-heading-4 {
     color: @markup-h4;
   }
-  .heading-5 {
+  .syntax-heading-5 {
     color: @markup-h5;
   }
-  .heading-6 {
+  .syntax-heading-6 {
     color: @markup-h6;
   }
 
-  .entity {
+  .syntax--entity {
     color: @entity-function;
   }
-  .link {
+  .syntax-link {
     color: @green;
     .entity {
       color: @purple;
     }
   }
 
-  .italic {
+  .syntax-italic {
     color: @yellow;
   }
-  .bold {
+  .syntax-bold {
     color: @yellow;
     font-weight: bold;
   }
-  .variable.list {
+  .syntax-variable.syntax.list {
     color: @yellow-highlight;
   }
 
-  .hr {
+  .syntax--hr {
     color: @meta-control-flow;
   }
 
-  .comment.quote {
+  .syntax--comment.syntax--quote {
     color: @string-quoted-single;
   }
+  
+  .syntax--support.syntax--quote {
+    color: @code-background;
+    background-color: @code-font-color;
+  }
 
-  .raw {
+  .syntax--raw {
     color: @red;
     border: 1px solid mix(@code-background, @string-quoted-double, 90%);
     background-color: mix(@code-background, @string-quoted-double, 90%);
