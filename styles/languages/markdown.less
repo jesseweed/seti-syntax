@@ -1,55 +1,67 @@
 @import "colors";
 
-// Styles for language-markdown package
-.markup.md {
-  .heading-1 {
+.syntax--source.syntax--md {
+  color: @code-font-color;
+
+  .syntax--heading-1 {
     color: @markup-h1;
   }
-  .heading-2 {
+  .syntax--heading-2 {
     color: @markup-h2;
   }
-  .heading-3 {
+  .syntax--heading-3 {
     color: @markup-h3;
   }
-  .heading-4 {
+  .syntax--heading-4 {
     color: @markup-h4;
   }
-  .heading-5 {
+  .syntax--heading-5 {
     color: @markup-h5;
   }
-  .heading-6 {
+  .syntax--heading-6 {
     color: @markup-h6;
   }
 
-  &.bold {
+  .syntax--entity {
+    color: @entity-function;
+  }
+  .syntax--link {
+    color: @green;
+    .syntax--entity {
+      color: @purple;
+    }
+  }
+
+  .syntax--italic {
+    color: @yellow;
+  }
+
+  .syntax--bold {
     color: @yellow;
     font-weight: bold;
   }
 
-  &.italic {
-    color: @yellow;
-    font-style: italic;
+  .syntax--variable.syntax--syntax.syntax--list {
+    color: @yellow-highlight;
   }
 
-  &.list {
-    .punctuation {
-      color: @yellow-highlight;
-    }
+  .syntax--hr {
+    color: @meta-control-flow;
   }
 
-  &.code, .raw {
+  .syntax--comment.syntax--quote {
+    color: @string-quoted-single;
+  }
+
+  .syntax--support.syntax--quote {
+    color: @code-background;
+    background-color: @code-font-color;
+  }
+
+  .syntax--raw {
     color: @red;
     border: 1px solid mix(@code-background, @string-quoted-double, 90%);
     background-color: mix(@code-background, @string-quoted-double, 90%);
     border-radius: 3px;
-  }
-
-  &.link {
-    .destination .uri {
-      color: @green;
-    }
-    .string {
-      color: @purple;
-    }
   }
 }
