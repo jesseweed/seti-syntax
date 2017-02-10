@@ -3,31 +3,44 @@
 .syntax--source.syntax--gfm {
   color: @code-font-color;
 
-  .syntax--heading {
-    color: @meta-control-flow;
-  }
   .syntax--heading-1 {
-    font-weight: bold;
+    color: @markup-h1;
   }
-  .syntax--heading-2 {
-    font-style: italic;
+  .syntax-heading-2 {
+    color: @markup-h2;
+  }
+  .syntax-heading-3 {
+    color: @markup-h3;
+  }
+  .syntax-heading-4 {
+    color: @markup-h4;
+  }
+  .syntax-heading-5 {
+    color: @markup-h5;
+  }
+  .syntax-heading-6 {
+    color: @markup-h6;
   }
 
   .syntax--entity {
     color: @entity-function;
   }
-  .syntax--link {
-    color: @entity-name-function;
+  .syntax-link {
+    color: @green;
+    .entity {
+      color: @purple;
+    }
   }
 
-  .syntax--italics {
-    color: @code-font-color;
+  .syntax-italic {
+    color: @yellow;
   }
-  .syntax--bold {
-    color: @code-font-color;
+  .syntax-bold {
+    color: @yellow;
+    font-weight: bold;
   }
-  .syntax--variable.syntax--list {
-    color: @constant;
+  .syntax-variable.syntax.list {
+    color: @yellow-highlight;
   }
 
   .syntax--hr {
@@ -37,17 +50,16 @@
   .syntax--comment.syntax--quote {
     color: @string-quoted-single;
   }
-
+  
   .syntax--support.syntax--quote {
     color: @code-background;
     background-color: @code-font-color;
   }
 
   .syntax--raw {
-    color: @string-quoted-double;
-    border: 1px solid mix(@code-background, @string-quoted-double, 30%);
-    background-color: mix(@code-background, @string-quoted-double, 80%);
+    color: @red;
+    border: 1px solid mix(@code-background, @string-quoted-double, 90%);
+    background-color: mix(@code-background, @string-quoted-double, 90%);
     border-radius: 3px;
   }
-
 }

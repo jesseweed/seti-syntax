@@ -1,0 +1,55 @@
+@import "colors";
+
+// Styles for language-markdown package
+.markup.md {
+  .heading-1 {
+    color: @markup-h1;
+  }
+  .heading-2 {
+    color: @markup-h2;
+  }
+  .heading-3 {
+    color: @markup-h3;
+  }
+  .heading-4 {
+    color: @markup-h4;
+  }
+  .heading-5 {
+    color: @markup-h5;
+  }
+  .heading-6 {
+    color: @markup-h6;
+  }
+
+  &.bold {
+    color: @yellow;
+    font-weight: bold;
+  }
+
+  &.italic {
+    color: @yellow;
+    font-style: italic;
+  }
+
+  &.list {
+    .punctuation {
+      color: @yellow-highlight;
+    }
+  }
+
+  &.code, .raw {
+    color: @red;
+    border: 1px solid mix(@code-background, @string-quoted-double, 90%);
+    background-color: mix(@code-background, @string-quoted-double, 90%);
+    border-radius: 3px;
+  }
+
+  &.link {
+    .destination .uri {
+      color: @green;
+    }
+    .string {
+      color: @purple;
+    }
+  }
+}

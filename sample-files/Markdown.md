@@ -11,7 +11,19 @@ regular paragraph.
 The quick brown fox jumped over the lazy
 dog's back.
 
+# Header 1
+## Header 2
 ### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+
+This is `inline code`.
+You can *emphasize text* or make it **bold**.
+This is a [website link](http://www.website.com).
+
+- This is a list
+* This is another list
 
 > This is a blockquote.
 >
