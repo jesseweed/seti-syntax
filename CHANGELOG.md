@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.2
+- Remove apmInstallSource
+
 ## 1.1.1
 - Fix deprecated selectors
 - Add support for Ink syntax
