@@ -351,6 +351,11 @@ atom-text-editor[mini], atom-text-editor.mini {
 
   &.syntax--unquoted {
     color: @string-unquoted;
+    &.syntax--heredoc, &.syntax--here-doc,
+    &.syntax--nowdoc, &.syntax--now-doc,
+    &.syntax--block, &.syntax--program-block {
+      color: @string;
+    }
   }
 
   &.syntax--other {
