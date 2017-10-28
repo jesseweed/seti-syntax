@@ -1,0 +1,17 @@
+@import "colors";
+
+.syntax--source.syntax--perl {
+
+  .syntax--pod {
+    &.syntax--displayed-text {
+      color: @constant;
+    }
+
+    &.syntax--inline.syntax--tag {
+      .syntax--punctuation.syntax--begin,
+      .syntax--punctuation.syntax--end {
+        color: @punctuation;
+      }
+    }
+  }
+}
