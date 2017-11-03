@@ -7,6 +7,12 @@
       color: @constant;
     }
 
+    &.syntax--constant.syntax--character.syntax--entity {
+      &, & .syntax--entity.syntax--name {
+        color: @constant;
+      }
+    }
+
     &.syntax--inline.syntax--tag {
       .syntax--punctuation.syntax--begin,
       .syntax--punctuation.syntax--end {
