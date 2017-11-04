@@ -114,6 +114,14 @@ atom-text-editor[mini], atom-text-editor.mini {
 .syntax--invalid.syntax--illegal, .syntax--invalid.syntax--deprecated {
   background: none;
   color: @error;
+
+  &.syntax--whitespace {
+    background-color: @error;
+  }
+
+  .syntax--punctuation {
+    color: @error-punc;
+  }
 }
 
 
