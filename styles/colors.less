@@ -62,6 +62,7 @@
 @constant: @color3; // true of var x = true, {{}} of {{> hbs_include}}
 @entity: @color5; // exports of module.exports, <div id= of <div id="#id">, . of .className
 @entity-function: @color5;
+@error-punc: darken(@error, 20%);
 @function: @entity-function;
 @function-param: @color1; // (one, two, three) of function (one, two, three)
 @meta: @code-font-color; // none of border: none;
@@ -95,6 +96,8 @@
 // STRING
 @string-quoted-double: @quotes;
 @string-quoted-single: @quotes;
+@string-unquoted: @quotes;
+@string-other: @string;
 
 @punctuation-definition-array: @string;
 @punctuation-definition-string: @string;

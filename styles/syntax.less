@@ -114,6 +114,14 @@ atom-text-editor[mini], atom-text-editor.mini {
 .syntax--invalid.syntax--illegal, .syntax--invalid.syntax--deprecated {
   background: none;
   color: @error;
+
+  &.syntax--whitespace {
+    background-color: @error;
+  }
+
+  .syntax--punctuation {
+    color: @error-punc;
+  }
 }
 
 
@@ -347,6 +355,19 @@ atom-text-editor[mini], atom-text-editor.mini {
   &.syntax--quoted {
     &.syntax--double { color: @string-quoted-double; }
     &.syntax--single { color: @string-quoted-single; }
+  }
+
+  &.syntax--unquoted {
+    color: @string-unquoted;
+    &.syntax--heredoc, &.syntax--here-doc,
+    &.syntax--nowdoc, &.syntax--now-doc,
+    &.syntax--block, &.syntax--program-block {
+      color: @string;
+    }
+  }
+
+  &.syntax--other {
+    color: @string-other;
   }
 
   .syntax--variable {
