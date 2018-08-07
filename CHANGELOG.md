@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.0
+- Remove spurious background from `.meta.separator`
+- Fix priority of `.source` ruleset
+- Improve highlighting of errors and invalid whitespace
+- Colour Pod entity references as character escapes
+- Add error highlighting to illegal whitespace in Pod
+- Add syntax-colouring tweaks for Perl and Pod files
+- Tweak colour applied to multiline unquoted strings
+- Add highlighting to unquoted/misc string patterns
+
 ## 1.1.2
 - Remove apmInstallSource
 
